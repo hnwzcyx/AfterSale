@@ -205,7 +205,7 @@ public class LoginService {
 				.put(Order.asc("type"));
 		List<ResourceBean> resourceBeans = resourceService.getList(criterionList);
 		List<TreeNode> treeNodes = convertFromResources(resourceBeans);
-		/*JSONArray treeNodesJsonArray = JSONArray.fromObject(treeNodes);*/
+		JSONArray treeNodesJsonArray = JSONArray.fromObject(treeNodes);
 		
 		
 		return treeNodes;
@@ -223,7 +223,7 @@ public class LoginService {
 	 */
 	private List<TreeNode> convertFromResources(List<ResourceBean> resourceBeans) {
 		List<TreeNode> treeNodes = new ArrayList<TreeNode>();
-		List<TreeNode> treeNodesChildrens = new ArrayList<TreeNode>();
+		
 		for(ResourceBean resourceBean : resourceBeans){
 			TreeNode treeNode = new TreeNode();
 			treeNode.setId(String.valueOf(resourceBean.getId()));
@@ -238,6 +238,7 @@ public class LoginService {
 					.put(Restrictions.eq("type", 2));
 			List<ResourceBean> resourceChildren = resourceService.getList(criterionList);
 			if (!resourceChildren.isEmpty()) {
+				List<TreeNode> treeNodesChildrens = new ArrayList<TreeNode>();
 				for(ResourceBean childrensResourceBean:resourceChildren){
 					TreeNode treeNodeChildren = new TreeNode();
 					treeNodeChildren.setId(String.valueOf(childrensResourceBean.getId()));

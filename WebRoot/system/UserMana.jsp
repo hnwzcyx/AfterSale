@@ -20,9 +20,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
+    <link rel="stylesheet" href="bootstrap/css/ionicons.min.css">
     <!--bootstrap-table  -->
     <link rel="stylesheet" href="plugins/bootstrap-table/bootstrap-table.min.css">
     <!-- Theme style -->
@@ -77,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            	系统管理
+            	用户列表
             <small>用户管理</small>
           </h1>
           <ol class="breadcrumb">
@@ -92,9 +94,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			<div class="row">
             <div class="col-xs-12">
               <div class="box">
-                <div class="box-header">
+               <!--  <div class="box-header">
                   <h3 class="box-title">用户列表</h3>
-                </div><!-- /.box-header -->
+                </div>/.box-header -->
                 <div id="toolbar">
 			        <button id="plus" class="btn btn-primary">
 			            <i class="glyphicon glyphicon-plus"></i> 新增
@@ -105,32 +107,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			    </div>
                 <div class="box-body table-responsive">
                   <table id="userTable">
-                    <!-- <tr>
-                      <th>用户ID</th>
-                      <th>用户名</th>
-                      <th>角色</th>
-                      <th>电话</th>
-                      <th>创建日期</th>
-                    </tr>
-                    <tr>
-                      <td>175</td>
-                      <td>Mike Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr> -->
+                    
                   </table>
-                </div>
-               <!--  <div class="box-footer clearfix">
-                  <ul class="pagination pagination-sm no-margin pull-right">
-                    <li><a href="#">&laquo;</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                  </ul>
-                </div> -->
-			
+                </div>	
               </div><!-- /.box -->
             </div>
            </div> 
@@ -138,14 +117,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div><!-- /.content-wrapper -->
 
       <!-- Main Footer -->
-      <footer class="main-footer">
-        <!-- To the right -->
-        <div class="pull-right hidden-xs">
-          Anything you want
-        </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
-      </footer>
+      <%@include file="/Frame/footer.jsp" %>
 
       
     </div><!-- ./wrapper -->
