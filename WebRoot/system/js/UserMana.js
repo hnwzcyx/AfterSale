@@ -16,7 +16,7 @@ $(document).ready(function(){
 	        field: 'email',
 	        title: '邮箱'
 	    }, {
-	        field: 'roles',
+	        field: 'roles.0.name',
 	        title: '角色'
 	    }],
 	    pagination:true,
@@ -25,6 +25,9 @@ $(document).ready(function(){
 	    showToggle:true,
 	    checkbox:true,
 	    toolbar:"#toolbar",
+	});
+	$("#addButton").click(function(){
+		$("#addModal").show();
 	});
 
 });

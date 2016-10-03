@@ -76,7 +76,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
+        <%-- <section class="content-header">
           <h1>
             Page Header
             <small>Optional description</small>
@@ -85,16 +85,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
             <li class="active">Here</li>
           </ol>
-        </section>
+        </section> --%>
 
         <!-- Main content -->
         <section class="content">
 			<div>
-				<%-- <s:debug></s:debug>
-				<s:property value="session"/> --%>
-				${sessionScope.sessionInfo.loginName }<br>
-				${sessionScope.menuInfo[0].attributes.url }
-				${sessionScope.menuInfo[0].text }
+				
 			</div>
           <!-- Your Page Content Here -->
 

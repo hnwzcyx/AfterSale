@@ -14,7 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="<%=basePath%>">
-    <title>AdminLTE 2 | Starter</title>
+    <title>售后系统 | 用户列表</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -41,6 +41,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+	function closeAdd(){
+		$("#addModal").hide();
+	}
+    </script>
   </head>
   <!--
   BODY TAG OPTIONS:
@@ -98,7 +103,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <h3 class="box-title">用户列表</h3>
                 </div>/.box-header -->
                 <div id="toolbar">
-			        <button id="plus" class="btn btn-primary">
+			        <button id="addButton" class="btn btn-primary" data-target="#addTable">
 			            <i class="glyphicon glyphicon-plus"></i> 新增
 			        </button>
 			        <button id="remove" class="btn btn-danger">
@@ -118,6 +123,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Main Footer -->
       <%@include file="/Frame/footer.jsp" %>
+      
+      <!--新增用户对话框   开始-->
+      <div class="modal" id="addModal" style="hidden:true;">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeAdd()"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">新增用户</h4>
+                  </div>
+                  <div class="modal-body">
+                  	<form class="form-group">
+                    <label>用户名</label>
+                    <input type="text" class="form-control" name="loginAccoount">
+                    <label>姓名</label>
+                    <input type="text" class="form-control" name="name">
+                    <label>邮箱</label>
+                    <input type="email" class="form-control" name="email"> 
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal" onclick="closeAdd();">关闭</button>
+                    <button type="button" class="btn btn-primary">保存</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+      <!--新增用户对话框 结束  -->
 
       
     </div><!-- ./wrapper -->

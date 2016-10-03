@@ -79,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            	系统管理
+            	资源列表
             <small>资源管理</small>
           </h1>
           <ol class="breadcrumb">
@@ -94,9 +94,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			<div class="row">
             <div class="col-xs-12">
               <div class="box">
-                <div class="box-header">
+                <!-- <div class="box-header">
                   <h3 class="box-title">资源列表</h3>
-                </div><!-- /.box-header -->
+                </div> --><!-- /.box-header -->
                 <div id="toolbar">
 			        <button id="plus" class="btn btn-primary">
 			            <i class="glyphicon glyphicon-plus"></i> 新增
